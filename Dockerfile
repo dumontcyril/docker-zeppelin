@@ -43,7 +43,7 @@ RUN set -ex \
  && git checkout -q $ZEPPELIN_COMMIT \
  && sed -i 's/--no-color/buildSkipTests --no-color/' zeppelin-web/pom.xml \
  && MAVEN_OPTS="-Xms512m -Xmx1024m" /tmp/apache-maven-3.3.9/bin/mvn --batch-mode package -DskipTests -Pbuild-distr \
-  -pl 'zeppelin-interpreter,zeppelin-zengine,zeppelin-display,spark-dependencies,spark,markdown,angular,shell,hive,hbase,postgresql,jdbc,elasticsearch,zeppelin-web,zeppelin-server,zeppelin-distribution' \
+  -pl 'zeppelin-interpreter,zeppelin-zengine,zeppelin-display,spark-dependencies,spark,markdown,angular,shell,hive,hbase,postgresql,jdbc,elasticsearch,cassandra,zeppelin-web,zeppelin-server,zeppelin-distribution' \
  && tar xvf /usr/src/zeppelin/zeppelin-distribution/target/zeppelin*.tar.gz -C /usr/ \
  && mv /usr/zeppelin* $ZEPPELIN_HOME \
  && mkdir -p $ZEPPELIN_HOME/logs \
