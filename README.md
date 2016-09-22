@@ -17,6 +17,7 @@ This image is large and opinionated. It contains:
   - hbase
   - elasticsearch
   - cassandra
+  - R
 
 A prior build of `dumontcyril/docker-zeppelin-r:latest` contained Spark 1.6.0, Python 2.7, and **all** of the stock interpreters.
 
